@@ -1,0 +1,8 @@
+#canvas{
+    position: absolute;
+    margin: auto;
+    background-color: black;
+    top:0;bottom:0;right:0;left:0;
+    box-shadow: black 20px 10px 50px; 
+
+}
