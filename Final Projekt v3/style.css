@@ -1,0 +1,280 @@
+/**************************************************************
+    Authors:  Mihael Subasic, Fabijan Habjanovic, Alvin Kazaz
+    Powered by "Yugo"
+
+***************************************************************/
+
+@font-face {
+  font-family: myAtariFont;
+  src: url(./fonts/AtariSmall.ttf);
+}
+/* ----------------------- css background */
+body {
+  background-image: url("./images/yugo.png"), url("./images/bulme_logo.png"),
+    url("./images/bulme_reverse.png"), url("./images/matrix3.png");
+  background-size: 6%, 10%, 10%, 100%;
+  /* opacity: 0.8; */
+  background-color: rgba(3, 136, 189, 0.836), rgba(60, 179, 49, 0.733);
+
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-attachment: fixed;
+  /* background-size: cover; */
+  background-position: bottom 10px right 10px, top 40px right 90px,
+    bottom 80px left 90px;
+}
+.flexbox-container {
+  display: flex;
+  outline: 3px solid rgb(77, 55, 158);
+}
+/* Score table on the left side   ----------------------------- */
+#scoretable {
+  background-color: rgba(1, 51, 36, 0.753);
+  text-shadow: 2px 2px 5px rgb(8, 0, 0);
+  width: 80px;
+  border: 2px solid green;
+  padding: 20px;
+  margin: 20px;
+}
+#canvas {
+  margin: 50px; /*new line*/
+  position: absolute;
+  border: 3px solid white;
+  transform: translate(-50%, -50%);
+  top: 40%;
+  left: 50%;
+}
+
+#canvas2 {
+  margin: 50px; /*new line*/
+  position: absolute;
+  border: 3px solid white;
+  transform: translate(-50%, -50%);
+  top: 40%;
+  left: 50%;
+}
+#startScreen {
+  margin: 50px; /*new line*/
+  width: 900px;
+  height: 600px;
+  background-color: rgba(0, 0, 0, 0.61);
+  backdrop-filter: blur(5px);
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+}
+#startButton {
+  background-color: darkblue;
+  border: 1px solid white;
+  color: white;
+  transform: translate(-30%, -30%);
+  text-align: center;
+  font-size: 25px;
+  margin-left: 48.5%;
+  margin-top: 10px;
+}
+#title {
+  text-align: center;
+  margin: 3cm;
+  color: #9ac503;
+  align-items: center;
+  font-family: myAtariFont;
+  font-size: 90px;
+  letter-spacing: 10px;
+}
+#name {
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid white;
+  padding: 2px solid black;
+  color: white;
+  width: 186px;
+  font-size: 15px;
+  margin: 0;
+  position:absolute;
+  top: 90%;
+  left: 40%;
+  border-radius: 20px;
+}
+::placeholder {
+  color: rgb(255, 255, 255);
+}
+#descriptionScreen {
+  margin: 50px; /*new line*/
+  width: 900px;
+  height: 600px;
+  background-color: rgb(10, 46, 0);
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+#titleDescription {
+  text-align: center;
+  margin: 1cm;
+  color: rgb(255, 255, 255);
+  align-items: center;
+}
+.descText {
+  margin: 1cm;
+  margin-top: 6cm;
+  color: rgb(255, 254, 254);
+  font-size: larger;
+  line-height: 330%;
+}
+#openDescriptionButton {
+  background-color: darkblue;
+  border: 1px solid white;
+  color: white;
+  transform: translate(-30%, -30%);
+  text-align: center;
+  font-size: 23px;
+  margin-left: 47.5%;
+  margin-top: 1.8cm;
+}
+#closeDescriptionButton {
+  background-color: darkblue;
+  border: 1px solid white;
+  color: white;
+  transform: translate(-30%, -30%);
+  text-align: center;
+  font-size: 25px;
+  margin-left: 48.5%;
+  margin-top: 0.5cm;
+}
+#Controls {
+  position: relative;
+  top: 10px;
+  width: 290px;
+  height: auto;
+}
+#Food {
+  position: relative;
+  top: 10px;
+}
+#Enemy1 {
+  position: relative;
+  top: 15px;
+}
+#Enemy2 {
+  position: relative;
+  top: 15px;
+}
+#specialItem {
+  position: relative;
+  top: 25px;
+  width: 65px;
+  height: auto;
+}
+#rulesScreen {
+  margin: 50px; /*new line*/
+  width: 900px;
+  height: 600px;
+  background-color: rgb(10, 46, 0);
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+#rulesText {
+  text-align: center;
+  line-height: 1.6;
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: antiquewhite;
+  padding: 25px;
+}
+#openRules {
+  background-color: darkblue;
+  border: 1px solid white;
+  color: white;
+  transform: translate(-30%, -30%);
+  text-align: center;
+  font-size: 23px;
+  margin-left: 48.5%;
+  margin-top: 0.5cm;
+}
+#closeRules {
+  background-color: darkblue;
+  border: 1px solid white;
+  color: white;
+  transform: translate(-30%, -30%);
+  text-align: center;
+  font-size: 25px;
+  margin-left: 47%;
+  margin-top: 0.5cm;
+}
+#gameOverScreen {
+  margin: 50px;
+  width: 900px;
+  height: 600px;
+  background-color: rgb(10, 46, 0);
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+#gameOverTitle {
+  text-align: center;
+  margin: 2cm;
+  color: #9ac503;
+  align-items: center;
+  font-family: myAtariFont;
+  font-size: 60px;
+  letter-spacing: 10px;
+}
+#restartGameButton {
+  background-color: darkblue;
+  border: 1px solid white;
+  color: white;
+  font-size: 25px;
+  margin:0;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+#score2 {
+  font-size: 30px;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+#scoreboard {
+  background-color:grey;
+  font-size: 20px;
+  width: 230px;
+  height: 200px;
+  overflow: auto;
+  display: inline-block;
+  align-self: center;
+  margin:0;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.th {
+  position: absolute;
+}
+#pauseScreen {
+  width: 900px;
+  height: 600px;
+  background-color: rgba(0, 0, 0, 0.61);
+  backdrop-filter: blur(5px);
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+#pauseText {
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  margin-left: 33%;
+}

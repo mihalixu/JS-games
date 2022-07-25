@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Powered by Yugo">
+    <title>Snake</title>
+    <link rel="shortcut icon" type="image/png" href="./images/favicon.png">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="loadMenuMusic()">
+      <div class="flexbox-item">
+            <div id="scoretable"> <span id="lives"s style="color: red; font-size: xx-large">Lives: ♥ ♥ ♥</span>
+                <br />
+                <span id="score" style="color: red; font-size: xx-large">Score: 0</span>
+                <br />
+                <span id="bonusTime" style="color: red; font-size: xx-large"></span>
+           </div>
+            <canvas id="canvas"></canvas>
+            <canvas id="canvas2"></canvas>
+            <div id="startScreen">
+            <div><h1 id="title">SNAKE</h1></div>
+            <button
+                type="button"
+                id="startButton"
+                disabled="disabled"
+                onclick="startHide()">
+                Start
+            </button>
+            <button id="openDescriptionButton" onclick="toggleDesc()">How to Play!</button>
+            <button id="openRules" onclick="toggleRules()">RULES</button>
+            <input
+                id="name"
+                type="text"
+                onkeyup="disableStart()"
+                placeholder="Enter nickname before start"
+                maxlength="15"
+            />
+            </div>
+            <div id="descriptionScreen">
+            <div><h1 id="titleDescription">How to Play!</h1></div>
+            <div>
+                <span class="descText">Controls: </span
+                ><img id="Controls" src="./images/control.png"/>
+            </div>
+            <div>
+                <span class="descText">Food: </span>
+                <img id="Food" src="./images/css.png"/>
+                <img id="Food" src="./images/html.png"/>
+                <img id="Food" src="./images/php.png"/>
+                <img id="Food" src="./images/js.png"/>
+                <img id="Food" src="./images/c++.png"/>
+                <img id="Food" src="./images/visual_48.png"/>
+                <img id="Food" src="./images/rasperry_48.png"/>
+                <img id="Food" src="./images/java_48.png"/>
+                <img id="Food" src="./images/arduino_48.png"/>
+                <img id="Food" src="./images/c_farbe48.png"/>
+                <img id="Food" src="./images/csharp.png"/>
+                <img id="Food" src="./images/php.png"/>
+                <img id="Food" src="./images/py48.png"/>
+                <img id="Food" src="./images/python.png"/>
+            </div>
+            <div>
+                <span class="descText">Enemies: </span>
+                <img id="Enemy" src="./images/netflix.png"/>
+                <img id="Enemy" src="./images/sps.png"/>
+                <img id="Enemy" src="./images/punti.png"/>
+                <img id="Enemy" src="./images/game.png"/>
+                <img id="Enemy" src="./images/bug64.png"/>
+                <img id="Enemy" src="./images/bug64w.png"/>
+                <img id="Enemy" src="./images/bier.png"/>
+                <img id="Enemy" src="./images/insta64.png"/>
+            </div>
+            <div>
+                <span class="descText">Special Item: </span>
+                <img id="specialItem" src="./images/redbull.png"/>
+            </div>
+            <button id="closeDescriptionButton" onclick="toggleDesc()">BACK</button>
+            </div>
+            <div id="rulesScreen">
+            <h1 id="titleDescription" style="color: antiquewhite;">Rules</h1>
+            <div id="rulesText">
+                This game is nothing but a classic Snake game which most of us have already played. 
+                The player controls the snake that roams around in dynamic board and picks up the food (items), 
+                trying to avoid enemies. You will lose a life every time you hit one of the enemies. In total, you have <strong>3 lives</strong>.
+             You will lose the game if you hit the tail or the edge of the playing area and if lives count is 0.
+                 Do not forget to pick up the energy drink <strong>‘’ Red Bull’’</strong> when appear. Red Bull is a booster.
+                  It will give you 3 instead 1 point,the possibility to move through the edges of the playing area, allowing you to hit tail and hit enemies without losing life for 10 sec long.
+                   Don't press more then one key at once!<br>
+                   <br>
+                    Please, read the instruction <strong>How to play</strong> to get more familiar with enemies (which need to be avoided) 
+                    and the type of food (which  need to be collected). <br>
+                    <br>
+                    <em>Good luck</em> and have a fun 😊
+            </div>
+            <button id="closeRules" onclick="toggleRules()">BACK</button>
+            </div>
+            <div id="gameOverScreen">
+            <div><h1 id="gameOverTitle">Game Over!</h1></div>
+            <div id="score2">Nice try! Your Score is: 0</div>
+            <table id="scoreboard">
+                <tr>
+                <th>Name</th>
+                <th>Score</th>
+                </tr>
+            </table>
+            <button id="restartGameButton" onclick="restartGame()">RESTART</button>
+            </div>
+            <div id="pauseScreen">
+            <div><h1 id="title">PAUSED</h1></div>
+            <div><span id="pauseText">Press ESC again to return!</span></div>
+            </div>
+            <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+            <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+            <!-- Import Firestore -->
+            <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+            <script src="bulme.js"></script>
+        </div>
+  </body>
+</html>
