@@ -1,0 +1,34 @@
+#canvas1 {
+    
+    position: absolute;
+    background: rgb(0, 255, 0);
+    width: 80%;
+    height: 80%;
+    border: 3px solid black;
+    top:0;bottom:0;right:0;left:0; 
+    margin:auto; 
+    
+}
+
+#Player1 {
+    position: absolute;
+    color: red;
+    font-size: 3cm;
+    margin-top: 5%;
+    margin-left: 42%;
+}
+
+#Player2 {
+    position: absolute;
+    color: blue;
+    font-size: 3cm;
+    margin: auto;
+    margin-top: 5%;
+    margin-left: 55%;
+}
+#source1{
+    display: none;
+}
+#source2{
+    display: none;
+}
